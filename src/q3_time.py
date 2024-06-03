@@ -1,4 +1,17 @@
-from typing import List, Tuple
-
 def q3_time(file_path: str) -> List[Tuple[str, int]]:
-    pass
+  # Crear Counter para los usuarios mencionados
+  mention_counter = Counter()
+
+  # Abrir archivo
+  with open(file_path, 'r') as fp:
+    # Procesar cada línea del archivo
+    for line in fp:
+      line_json = json.loads(line)
+      mentioned_users = line_json.get("mentionedUsers", [])
+
+      # Actualizar el Counter para los usuarios mencionados
+      if mentioned_users:
+        mention_counter.update(user["username"] for user in mentioned_users if user)
+
+  # Devolver el top 10 de usuarios mencionados
+  return mention_counter.most_common(10)
