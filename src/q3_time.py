@@ -1,3 +1,9 @@
+from typing import List, Tuple
+import json
+import pandas as pd
+import emoji
+from collections import Counter
+
 def q3_time(file_path: str) -> List[Tuple[str, int]]:
   # Crear Counter para los usuarios mencionados
   mention_counter = Counter()
