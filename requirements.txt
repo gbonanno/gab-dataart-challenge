@@ -1,1 +1,13 @@
 memory-profiler==0.61.0
+pandas==2.0.3
+json==2.0.9
+emoji==2.12.1
+gdown==4.7.3
+zipfile==3.11.2
+collections==3.10.0
+importlib==3.7.0
+sys==3.12.0
+memory_profiler==0.61.0
+cProfile==3.8.0
+typing==3.12.0
+datetime==3.12.0
